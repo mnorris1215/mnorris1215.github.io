@@ -1,0 +1,21 @@
+// breakpoints
+@mixin breakpoint( $value, $operator: 'min-width', $query: 'screen') {
+    @media #{$query} and (#{$operator}: #{$value}px) {
+        @content;
+    }
+}
+
+@mixin split-background ($direction, $color1, $color2) {
+    background: linear-gradient($direction, $color1 0%, $color1 50%, #000000 50%, $color2 50%, $color2 100%);
+}
+
+@mixin hover-settings($background){
+    background-color: $background;
+    position: absolute;
+    content: '';
+    top:0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}

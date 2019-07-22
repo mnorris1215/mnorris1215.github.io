@@ -45,7 +45,7 @@ ul li {
 }
 
 .container {
-  width: 100vw;
+  width: 100%;
   font-family: "Signika", sans-serif;
   color: #f9f1fa;
 }
@@ -98,6 +98,9 @@ ul li {
   background-repeat: no-repeat;
   padding: 5%;
 }
+.container .up:hover .hover-text {
+  opacity: 1;
+}
 @media screen and (min-width: 768px) {
   .container .up {
     width: 30%;
@@ -117,6 +120,7 @@ ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .container .projects {
   position: relative;
@@ -134,6 +138,7 @@ ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .container .xp {
   position: relative;
@@ -148,6 +153,7 @@ ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .container .contact {
   position: relative;
@@ -162,6 +168,28 @@ ul li {
   height: 100%;
   width: 100%;
   cursor: pointer;
+  transition: 0.5s ease;
+}
+.container .hover-text {
+  color: white;
+  font-size: 48px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
+  position: absolute;
+  margin: auto;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 99;
+}
+@media screen and (min-width: 768px) {
+  .container .hover-text {
+    font-size: 65px;
+  }
 }
 .container .modal {
   display: none;
@@ -177,13 +205,14 @@ ul li {
 }
 .container .modal .modal-header {
   font-size: 48px;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: black;
 }
 .container .modal .modal-header .close {
   color: white;
   float: right;
   font-size: 38px;
   font-weight: bold;
-  border: solid 2px black;
   border-radius: 50%;
   background-color: #da0000;
   width: 50px;

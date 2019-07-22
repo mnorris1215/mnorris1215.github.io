@@ -1,9 +1,9 @@
 @import "mixins";
 
 $light-purple: rgba(249, 241, 250, 1);
-$faint-light-purple:rgba(249, 241, 250, .7);
+$faint-light-purple:rgba(249, 241, 250, .9);
 $dark-purple: rgba(91, 66, 235, 1);
-$faint-dark-purple: rgba(91, 66, 235, .7);
+$faint-dark-purple: rgba(91, 66, 235, .9);
 $body: 'Signika', sans-serif;
 
 
@@ -11,6 +11,7 @@ body{
     background-color: $faint-dark-purple;
     overflow-x: hidden;
     margin: auto;
+    font-family: $body;
 }
 
 ul li{list-style-type: none;}
@@ -39,7 +40,7 @@ ul li{list-style-type: none;}
     @include breakpoint(768){
         width: 20vw;
         height: 100vh;
-        padding: 15% 0;
+        padding: 9% 0;
         font-size: 30px;
 
         li{
@@ -109,13 +110,13 @@ ul li{list-style-type: none;}
         }
         @include breakpoint(768){
             @include split-background(to right, $light-purple, $dark-purple);
-            padding: 15% 0;
+            padding: 10% 0;
 
             .content{
                 text-align: right;
                 padding-right: 10%;
 
-                h1{font-size: 60px;}
+                h1{font-size: 70px;}
                 h2{
                     font-size: 36px;
                     color: $light-purple;}
@@ -202,7 +203,7 @@ ul li{list-style-type: none;}
       z-index: 99;
 
         @include breakpoint(768){
-            font-size: 65px;
+            font-size: 60px;
         }
     }
 
@@ -216,13 +217,15 @@ ul li{list-style-type: none;}
         height: 100%;
         overflow: auto;
         @include split-background(to right, $faint-light-purple, $faint-dark-purple);
-
         color: white;
+        animation: fadein .75s;
+        -moz-animation: fadein .75s; /* Firefox */
+        -webkit-animation: fadein .75s; /* Safari and Chrome */
 
         .modal-header{
             font-size: 48px;
             -webkit-text-stroke-width: .5px;
-            -webkit-text-stroke-color: black;
+            -webkit-text-stroke-color: $dark-purple;
 
             .close{
                 color: white;
@@ -242,6 +245,9 @@ ul li{list-style-type: none;}
 
                 }
             }
+            @include breakpoint(768){
+                font-size: 60px;
+            }
         }
 
         .modal-body{
@@ -257,15 +263,68 @@ ul li{list-style-type: none;}
             @include breakpoint(768){
                 width: 60%;
             }
+
+            .info{
+                display:block;
+                position: relative;
+                font-size: 30px;
+                padding: 5%;
+                margin: 5%;
+            }
         }
 
-        .thumbnail{
-            width: 234px;
-            height: 194px;
-            border: solid 2px rgba(91, 66, 235, 1);
-            border-radius: 20%;
+        .image-content-block {
+            padding: 5%;
+            margin-bottom: 5%;
+
+            .thumbnail {
+                width: 254px;
+                height: 194px;
+                border: solid 2px rgba(91, 66, 235, 1);
+                border-radius: 20%;
+            }
+
+            h3{
+                font-size: 36px;
+                color: $dark-purple;
+            }
+
+            @include breakpoint(768){
+                width: 100%;
+                height: auto;
+
+                .thumbnail{float: left;}
+
+                .description{padding: 0 5%;}
+            }
+        }
+
+        @keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
         }
     }
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+
+}
 
     .footer{
         position: relative;
@@ -289,8 +348,8 @@ ul li{list-style-type: none;}
             li{padding: 5px 20px;}
 
             .icons{
-                width: 50px;
-                height: 50px;
+                width: 75px;
+                height: 75px;
             }
         }
         @include breakpoint(768){
@@ -299,11 +358,12 @@ ul li{list-style-type: none;}
 
             .copy{
                 color: $light-purple;
+                font-size: 60px;
                 text-align: left;
-                left: 25%;
+                margin-left: 5%;
             }
             .container ul{
-                left: 17%;
+                left: 20%;
                 justify-content: center;
                 padding-top: 0;
             }

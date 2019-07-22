@@ -1,5 +1,6 @@
+// Loading spinner
 function onReady(callback) {
-    var intervalID = window.setInterval(checkReady, 1000);
+    var intervalID = window.setInterval(checkReady, 750);
 
     function checkReady() {
         if (document.getElementsByTagName('body')[0] !== undefined) {
@@ -19,9 +20,7 @@ onReady(function () {
 });
 
 
-
-
-
+// Modal open/close
 let blocks = [...document.getElementsByClassName("open")];
 
 blocks.forEach(function(link){

@@ -1,7 +1,8 @@
 body {
-  background-color: rgba(91, 66, 235, 0.7);
+  background-color: rgba(91, 66, 235, 0.9);
   overflow-x: hidden;
   margin: auto;
+  font-family: "Signika", sans-serif;
 }
 
 ul li {
@@ -31,7 +32,7 @@ ul li {
   .nav {
     width: 20vw;
     height: 100vh;
-    padding: 15% 0;
+    padding: 9% 0;
     font-size: 30px;
   }
   .nav li {
@@ -59,7 +60,7 @@ ul li {
   margin: 150px 0;
   border: 16px solid #5b42eb;
   border-radius: 50%;
-  border-top: 16px solid rgba(249, 241, 250, 0.7);
+  border-top: 16px solid rgba(249, 241, 250, 0.9);
   -webkit-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
 }
@@ -110,14 +111,14 @@ ul li {
 @media screen and (min-width: 768px) {
   .container .hero {
     background: linear-gradient(to right, #f9f1fa 0%, #f9f1fa 50%, #000000 50%, #5b42eb 50%, #5b42eb 100%);
-    padding: 15% 0;
+    padding: 10% 0;
   }
   .container .hero .content {
     text-align: right;
     padding-right: 10%;
   }
   .container .hero .content h1 {
-    font-size: 60px;
+    font-size: 70px;
   }
   .container .hero .content h2 {
     font-size: 36px;
@@ -230,7 +231,7 @@ ul li {
 }
 @media screen and (min-width: 768px) {
   .container .hover-text {
-    font-size: 65px;
+    font-size: 60px;
   }
 }
 .container .modal {
@@ -242,13 +243,18 @@ ul li {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background: linear-gradient(to right, rgba(249, 241, 250, 0.7) 0%, rgba(249, 241, 250, 0.7) 50%, #000000 50%, rgba(91, 66, 235, 0.7) 50%, rgba(91, 66, 235, 0.7) 100%);
+  background: linear-gradient(to right, rgba(249, 241, 250, 0.9) 0%, rgba(249, 241, 250, 0.9) 50%, #000000 50%, rgba(91, 66, 235, 0.9) 50%, rgba(91, 66, 235, 0.9) 100%);
   color: white;
+  animation: fadein 0.75s;
+  -moz-animation: fadein 0.75s;
+  /* Firefox */
+  -webkit-animation: fadein 0.75s;
+  /* Safari and Chrome */
 }
 .container .modal .modal-header {
   font-size: 48px;
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: #5b42eb;
 }
 .container .modal .modal-header .close {
   color: white;
@@ -266,6 +272,11 @@ ul li {
   color: black;
   text-decoration: none;
 }
+@media screen and (min-width: 768px) {
+  .container .modal .modal-header {
+    font-size: 60px;
+  }
+}
 .container .modal .modal-body {
   background-color: #fefefe;
   color: black;
@@ -281,11 +292,64 @@ ul li {
     width: 60%;
   }
 }
-.container .modal .thumbnail {
-  width: 234px;
+.container .modal .modal-body .info {
+  display: block;
+  position: relative;
+  font-size: 30px;
+  padding: 5%;
+  margin: 5%;
+}
+.container .modal .image-content-block {
+  padding: 5%;
+  margin-bottom: 5%;
+}
+.container .modal .image-content-block .thumbnail {
+  width: 254px;
   height: 194px;
   border: solid 2px #5b42eb;
   border-radius: 20%;
+}
+.container .modal .image-content-block h3 {
+  font-size: 36px;
+  color: #5b42eb;
+}
+@media screen and (min-width: 768px) {
+  .container .modal .image-content-block {
+    width: 100%;
+    height: auto;
+  }
+  .container .modal .image-content-block .thumbnail {
+    float: left;
+  }
+  .container .modal .image-content-block .description {
+    padding: 0 5%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .container .footer {
   position: relative;
@@ -309,8 +373,8 @@ ul li {
   padding: 5px 20px;
 }
 .container .footer .container ul .icons {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
 }
 @media screen and (min-width: 768px) {
   .container .footer {
@@ -319,11 +383,12 @@ ul li {
   }
   .container .footer .copy {
     color: #f9f1fa;
+    font-size: 60px;
     text-align: left;
-    left: 25%;
+    margin-left: 5%;
   }
   .container .footer .container ul {
-    left: 17%;
+    left: 20%;
     justify-content: center;
     padding-top: 0;
   }

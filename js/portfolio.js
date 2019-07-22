@@ -1,24 +1,47 @@
-let blocks = [...document.getElementsByClassName("up")];
+function onReady(callback) {
+    var intervalID = window.setInterval(checkReady, 1000);
 
-blocks.forEach(function(btn){
-    btn.onclick = function(){
-        let modal = btn.getAttribute('data-modal');
+    function checkReady() {
+        if (document.getElementsByTagName('body')[0] !== undefined) {
+            window.clearInterval(intervalID);
+            callback.call(this);
+        }
+    }
+}
 
+function show(id, value) {
+    document.getElementById(id).style.display = value ? 'flex' : 'none';
+}
+
+onReady(function () {
+    show('block-section', true);
+    show('spinner', false);
+});
+
+
+
+
+
+let blocks = [...document.getElementsByClassName("open")];
+
+blocks.forEach(function(link){
+    link.onclick = function(){
+        let modal = link.getAttribute('data-modal');
         document.getElementById(modal).style.display = 'block';
     }
 });
 
-let closeBtns = [...document.querySelectorAll(".close")];
+let closeLinks = [...document.querySelectorAll(".close")];
 
-closeBtns.forEach(function(btn){
-    btn.onclick = function(){
-        let modal = btn.closest('.modal');
+closeLinks.forEach(function(link){
+    link.onclick = function(){
+        let modal = link.closest('.modal');
         modal.style.display = 'none';
     }
 });
 
-window.onclick = function(event){
-    if(event.target.className === 'modal'){
-        event.target.style.display = 'none';
+window.onclick = function(modal){
+    if(modal.target.className === 'modal'){
+        modal.target.style.display = 'none';
     }
 }

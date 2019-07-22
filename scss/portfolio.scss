@@ -8,36 +8,31 @@ $body: 'Signika', sans-serif;
 
 
 body{
-    background-color: $light-purple;
+    background-color: $faint-dark-purple;
     overflow-x: hidden;
-    margin: 0;
+    margin: auto;
 }
 
-ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 10px 20px;
-}
-
+ul li{list-style-type: none;}
 
 .nav{
-    width: 100vw;
+    width: 100%;
     position: absolute;
-    // background: $light-purple;
-    // opacity: .9;
     z-index:99;
 
     li{
+        display: inline-block;
         position: relative;
         text-align: center;
         text-decoration: none;
         color: $light-purple;
         font-size: 22px;
-        // padding: 15% 0;
+        padding: 10px 20px;
 
         a{
             text-decoration: none;
             color: $light-purple;
+            cursor: pointer;
         }
 
     }
@@ -57,6 +52,39 @@ ul li{
         }
     }
 }
+#block-section{display:none;}
+
+#spinner{
+  position: relative;
+  left: 35%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  z-index: 99999;
+  margin: 150px 0;
+  border: 16px solid $dark-purple;
+  border-radius: 50%;
+  border-top: 16px solid $faint-light-purple;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+
+  @include breakpoint(768){
+     margin: 150px 0;
+     left: 45%;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 
 .container {
     width: 100%;
@@ -71,7 +99,6 @@ ul li{
             position: relative;
             z-index: 2;
             text-align: center;
-            padding-right: 10%;
 
             h1{font-size: 48px;}
 
@@ -86,6 +113,7 @@ ul li{
 
             .content{
                 text-align: right;
+                padding-right: 10%;
 
                 h1{font-size: 60px;}
                 h2{
@@ -222,8 +250,13 @@ ul li{
             margin: 10vh auto;
             padding: 20px;
             border: 1px solid #888;
-            width: 50%;
+            border-radius: 20px;
+            width: 80%;
             height: auto;
+
+            @include breakpoint(768){
+                width: 60%;
+            }
         }
 
         .thumbnail{
@@ -247,9 +280,13 @@ ul li{
 
         }
         .container ul{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
             position: relative;
             padding-top: 12%;
-            left: 5%;
+
+            li{padding: 5px 20px;}
 
             .icons{
                 width: 50px;
@@ -266,7 +303,8 @@ ul li{
                 left: 25%;
             }
             .container ul{
-                left:50%;
+                left: 17%;
+                justify-content: center;
                 padding-top: 0;
             }
         }

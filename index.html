@@ -13,7 +13,7 @@
         <nav>
             <div class="nav">
                 <ul>
-                    <li>Contact</li>
+                    <li><a id="contact-nav" class="open" data-modal="contactModal">Contact</a></li>
                     <li><a href="media/Monica_Norris_WebDev.pdf" target="_blank">
                             Resume</a></li>
                 </ul>
@@ -30,13 +30,16 @@
 
             </section>
 
-    <!-- Four block section -->
-            <section class= "four-up">
+            <!-- Loading spinner -->
+            <div id="spinner"></div>
 
-                <a class=" up about" data-modal="aboutModal"><span class="hover-text">About</span></a>
-                <a class="projects up" data-modal="projectsModal"><span class="hover-text">Projects</span></a>
-                <a class="xp up" data-modal="xpModal"><span class="hover-text">Experience</span></a>
-                <a class="contact up" data-modal="contactModal"><span class="hover-text">Contact</span></a>
+    <!-- Four block section -->
+            <section class= "four-up" id="block-section">
+
+                <a class="about up open" data-modal="aboutModal"><span class="hover-text">About</span></a>
+                <a class="projects up open" data-modal="projectsModal"><span class="hover-text">Projects</span></a>
+                <a class="xp up open" data-modal="xpModal"><span class="hover-text">Experience</span></a>
+                <a class="contact up open" data-modal="contactModal"><span class="hover-text">Contact</span></a>
 
                 <!-- Modals -->
                 <!-- About -->
@@ -136,20 +139,19 @@
                     </div>
                     <div class="social-links">
                         <ul>
-                            <li><a href="https://www.linkedin.com/in/monica-norriswebdevelopment" target="_blank">
-                                <img class="icons" src="media/linkedInIcon.png"></img></a></li>
-                            <li><a href="https://twitter.com/monicanorris1" target="_blank">
-                                <img class="icons" src="media/twitterIcon.png"></img></a></li>
-                            <li><a href="https://www.facebook.com/12norris15" target="_blank">
-                                <img class="icons" src="media/facebookIcon.png"></img></a></li>
                             <li><a href="media/Monica_Norris_WebDev.pdf" target="_blank">
-                                <img class="icons" src="media/resumeIcon.png"></img></a></li>
+                                <img class="icons" src="media/resumeIcon.png" alt="My Resume"></img></a></li>
+                            <li><a href="https://www.linkedin.com/in/monica-norriswebdevelopment" target="_blank">
+                                <img class="icons" src="media/linkedInIcon.png" alt="LinkedIn"></img></a></li>
+                            <li><a href="https://github.com/mnorris1215" target="_blank">
+                                <img class="icons" src="media/githubIcon.png" alt="GitHub"></img></a></li>
+                            <li><a href="https://twitter.com/monicanorris1" target="_blank">
+                                <img class="icons" src="media/twitterIcon.png" alt="Twitter"></img></a></li>
                         </ul>
                     </div>
                 </div>
             </section>
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script type="text/javascript" src="js/portfolio.js"></script>
     </body>
 </html>

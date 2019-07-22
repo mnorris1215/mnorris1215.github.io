@@ -1,30 +1,31 @@
 body {
-  background-color: #f9f1fa;
+  background-color: rgba(91, 66, 235, 0.7);
   overflow-x: hidden;
-  margin: 0;
+  margin: auto;
 }
 
 ul li {
   list-style-type: none;
-  display: inline-block;
-  padding: 10px 20px;
 }
 
 .nav {
-  width: 100vw;
+  width: 100%;
   position: absolute;
   z-index: 99;
 }
 .nav li {
+  display: inline-block;
   position: relative;
   text-align: center;
   text-decoration: none;
   color: #f9f1fa;
   font-size: 22px;
+  padding: 10px 20px;
 }
 .nav li a {
   text-decoration: none;
   color: #f9f1fa;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -44,6 +45,47 @@ ul li {
   }
 }
 
+#block-section {
+  display: none;
+}
+
+#spinner {
+  position: relative;
+  left: 35%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  z-index: 99999;
+  margin: 150px 0;
+  border: 16px solid #5b42eb;
+  border-radius: 50%;
+  border-top: 16px solid rgba(249, 241, 250, 0.7);
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+@media screen and (min-width: 768px) {
+  #spinner {
+    margin: 150px 0;
+    left: 45%;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .container {
   width: 100%;
   font-family: "Signika", sans-serif;
@@ -57,7 +99,6 @@ ul li {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding-right: 10%;
 }
 .container .hero .content h1 {
   font-size: 48px;
@@ -73,6 +114,7 @@ ul li {
   }
   .container .hero .content {
     text-align: right;
+    padding-right: 10%;
   }
   .container .hero .content h1 {
     font-size: 60px;
@@ -230,8 +272,14 @@ ul li {
   margin: 10vh auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 50%;
+  border-radius: 20px;
+  width: 80%;
   height: auto;
+}
+@media screen and (min-width: 768px) {
+  .container .modal .modal-body {
+    width: 60%;
+  }
 }
 .container .modal .thumbnail {
   width: 234px;
@@ -251,9 +299,14 @@ ul li {
   text-align: center;
 }
 .container .footer .container ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
   position: relative;
   padding-top: 12%;
-  left: 5%;
+}
+.container .footer .container ul li {
+  padding: 5px 20px;
 }
 .container .footer .container ul .icons {
   width: 50px;
@@ -270,7 +323,8 @@ ul li {
     left: 25%;
   }
   .container .footer .container ul {
-    left: 50%;
+    left: 17%;
+    justify-content: center;
     padding-top: 0;
   }
 }

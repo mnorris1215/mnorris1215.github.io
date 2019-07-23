@@ -100,6 +100,8 @@ ul li{list-style-type: none;}
             position: relative;
             z-index: 2;
             text-align: center;
+            @include title-shadow;
+
 
             h1{font-size: 48px;}
 
@@ -189,6 +191,7 @@ ul li{list-style-type: none;}
     .hover-text{
       color: white;
       font-size: 48px;
+      @include title-shadow;
       -webkit-text-stroke-width: .5px;
       -webkit-text-stroke-color: black;
       position: absolute;
@@ -222,10 +225,13 @@ ul li{list-style-type: none;}
         -moz-animation: fadein .75s; /* Firefox */
         -webkit-animation: fadein .75s; /* Safari and Chrome */
 
+
         .modal-header{
             font-size: 48px;
-            -webkit-text-stroke-width: .5px;
-            -webkit-text-stroke-color: $dark-purple;
+            -webkit-text-stroke-width: .25px;
+            -webkit-text-stroke-color: black;
+            text-shadow: 2px 2px black;
+            color: $light-purple;
 
             .close{
                 color: white;
@@ -298,33 +304,8 @@ ul li{list-style-type: none;}
                 .description{padding: 0 5%;}
             }
         }
-
-        @keyframes fadein {
-    from {
-        opacity:0;
+        @include fadein-block;
     }
-    to {
-        opacity:1;
-    }
-    }
-    @-moz-keyframes fadein { /* Firefox */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-    @-webkit-keyframes fadein { /* Safari and Chrome */
-        from {
-            opacity:0;
-        }
-        to {
-            opacity:1;
-        }
-    }
-
-}
 
     .footer{
         position: relative;
@@ -336,6 +317,7 @@ ul li{list-style-type: none;}
             font-size: 40px;
             position: relative;
             text-align: center;
+            @include title-shadow;
 
         }
         .container ul{

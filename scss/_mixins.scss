@@ -9,6 +9,10 @@
     background: linear-gradient($direction, $color1 0%, $color1 50%, #000000 50%, $color2 50%, $color2 100%);
 }
 
+@mixin title-shadow{
+    text-shadow: 4px 4px black;
+}
+
 @mixin hover-settings($background){
     background-color: $background;
     position: absolute;
@@ -19,4 +23,33 @@
     width: 100%;
     cursor: pointer;
     transition: .5s ease;
+}
+
+@mixin fadein-block{
+
+    @keyframes fadein {
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+    @-moz-keyframes fadein { /* Firefox */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
+
+    @-webkit-keyframes fadein { /* Safari and Chrome */
+        from {
+            opacity:0;
+        }
+        to {
+            opacity:1;
+        }
+    }
 }

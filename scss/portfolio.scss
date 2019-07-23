@@ -5,6 +5,7 @@ $faint-light-purple:rgba(249, 241, 250, .9);
 $dark-purple: rgba(91, 66, 235, 1);
 $faint-dark-purple: rgba(91, 66, 235, .9);
 $body: 'Signika', sans-serif;
+$shadow: rgba(51, 51, 51, 0.97);
 
 
 body{
@@ -17,42 +18,50 @@ body{
 ul li{list-style-type: none;}
 
 .nav{
-    width: 100%;
+    width: 80%;
     position: absolute;
     z-index:99;
+    margin-left: calc(25% - 35px);
 
-    li{
-        display: inline-block;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        color: $light-purple;
-        font-size: 22px;
-        padding: 10px 20px;
-
-        a{
+    ul{
+        margin: auto;
+        li{
+            display: inline-block;
+            position: relative;
+            text-align: center;
             text-decoration: none;
             color: $light-purple;
-            cursor: pointer;
-        }
+            font-size: 22px;
+            padding: 10px;
+            transition: transform .7s;
 
+            a{
+                text-decoration: none;
+                color: $light-purple;
+                cursor: pointer;
+            }
+            &:hover {@include hover-grow;}
+
+            @include breakpoint(768){
+                font-size: 30px;
+                padding: 10% 0;
+                padding-left: 10%;
+
+                font-size: 60px;
+                color: $dark-purple;
+                a{color: $dark-purple;}
+
+            }
+        }
     }
     @include breakpoint(768){
         width: 20vw;
         height: 100vh;
-        padding: 9% 0;
-        font-size: 30px;
-
-        li{
-            padding: 10% 0;
-            padding-right: 10%;
-            font-size: 60px;
-            color: $dark-purple;
-
-            a{color: $dark-purple;}
-        }
+        margin: 0;
+        padding: 11% 0;
     }
 }
+
 #block-section{display:none;}
 
 #spinner{
@@ -100,10 +109,11 @@ ul li{list-style-type: none;}
             position: relative;
             z-index: 2;
             text-align: center;
-            @include title-shadow;
 
 
-            h1{font-size: 48px;}
+
+            h1{font-size: 48px;
+                @include title-shadow;}
 
             h2{
                font-size: 24px;
@@ -113,6 +123,7 @@ ul li{list-style-type: none;}
         @include breakpoint(768){
             @include split-background(to right, $light-purple, $dark-purple);
             padding: 10% 0;
+            @include title-shadow;
 
             .content{
                 text-align: right;
@@ -231,7 +242,7 @@ ul li{list-style-type: none;}
             -webkit-text-stroke-width: .25px;
             -webkit-text-stroke-color: black;
             text-shadow: 2px 2px black;
-            color: $light-purple;
+            color: white;
 
             .close{
                 color: white;
@@ -244,15 +255,27 @@ ul li{list-style-type: none;}
                 height: auto;
                 margin-right: 20px;
                 cursor: pointer;
+                transition: transform .9s;
 
-                &:hover:focus{
-                    color: black;
-                    text-decoration: none;
-
+                &:hover{
+                    @include hover-grow;
+                    box-shadow: 2px 2px 5px $faint-light-purple;
+                    &:focus{
+                        color: black;
+                        text-decoration: none;
+                    }
                 }
             }
             @include breakpoint(768){
+                width: 65%;
                 font-size: 60px;
+                margin: auto;
+
+                .close{
+                    font-size: 50px;
+                    width: 65px;
+                    height: 65px;
+                }
             }
         }
 
@@ -265,9 +288,17 @@ ul li{list-style-type: none;}
             border-radius: 20px;
             width: 80%;
             height: auto;
+            font-size: 20px;
+            line-height: 1.75;
+            box-shadow: 4px 4px 5px $shadow;
 
             @include breakpoint(768){
+                text-align: left;
                 width: 60%;
+
+                h3{
+                    text-align: center;
+                    font-size: 24px;}
             }
 
             .info{
@@ -288,6 +319,9 @@ ul li{list-style-type: none;}
                 height: 194px;
                 border: solid 2px rgba(91, 66, 235, 1);
                 border-radius: 20%;
+                transition: transform .7s;
+
+                &:hover {@include hover-grow;}
             }
 
             h3{
@@ -299,11 +333,16 @@ ul li{list-style-type: none;}
                 width: 100%;
                 height: auto;
 
-                .thumbnail{float: left;}
+                .thumbnail{
+                    float: left;}
 
-                .description{padding: 0 5%;}
+                .description{
+                    text-align: right;
+                    padding: 0 10%;
+                }
             }
         }
+
         @include fadein-block;
     }
 
@@ -317,23 +356,30 @@ ul li{list-style-type: none;}
             font-size: 40px;
             position: relative;
             text-align: center;
-            @include title-shadow;
+
 
         }
-        .container ul{
+
+        .social-links{padding-top: 40px;}
+        .social-links ul{
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             position: relative;
             padding-top: 12%;
 
-            li{padding: 5px 20px;}
+            li{
+                padding: 5px 20px;
+            }
 
             .icons{
                 width: 75px;
                 height: 75px;
-            }
+                transition: transform .7s;
+
+                &:hover {@include hover-grow;}
         }
+    }
         @include breakpoint(768){
             @include split-background(to left, $light-purple, $dark-purple);
             padding: 5% 0;
@@ -343,7 +389,10 @@ ul li{list-style-type: none;}
                 font-size: 60px;
                 text-align: left;
                 margin-left: 5%;
+                @include title-shadow;
             }
+
+            .social-links{padding-top:0;}
             .container ul{
                 left: 20%;
                 justify-content: center;

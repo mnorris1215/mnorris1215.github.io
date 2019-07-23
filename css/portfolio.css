@@ -10,39 +10,53 @@ ul li {
 }
 
 .nav {
-  width: 100%;
+  width: 80%;
   position: absolute;
   z-index: 99;
+  margin-left: calc(25% - 35px);
 }
-.nav li {
+.nav ul {
+  margin: auto;
+}
+.nav ul li {
   display: inline-block;
   position: relative;
   text-align: center;
   text-decoration: none;
   color: #f9f1fa;
   font-size: 22px;
-  padding: 10px 20px;
+  padding: 10px;
+  transition: transform 0.7s;
 }
-.nav li a {
+.nav ul li a {
   text-decoration: none;
   color: #f9f1fa;
   cursor: pointer;
+}
+.nav ul li:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+}
+@media screen and (min-width: 768px) {
+  .nav ul li {
+    font-size: 30px;
+    padding: 10% 0;
+    padding-left: 10%;
+    font-size: 60px;
+    color: #5b42eb;
+  }
+  .nav ul li a {
+    color: #5b42eb;
+  }
 }
 @media screen and (min-width: 768px) {
   .nav {
     width: 20vw;
     height: 100vh;
-    padding: 9% 0;
-    font-size: 30px;
-  }
-  .nav li {
-    padding: 10% 0;
-    padding-right: 10%;
-    font-size: 60px;
-    color: #5b42eb;
-  }
-  .nav li a {
-    color: #5b42eb;
+    margin: 0;
+    padding: 11% 0;
   }
 }
 
@@ -100,10 +114,10 @@ ul li {
   position: relative;
   z-index: 2;
   text-align: center;
-  text-shadow: 4px 4px black;
 }
 .container .hero .content h1 {
   font-size: 48px;
+  text-shadow: 4px 4px rgba(51, 51, 51, 0.97);
 }
 .container .hero .content h2 {
   font-size: 24px;
@@ -113,6 +127,7 @@ ul li {
   .container .hero {
     background: linear-gradient(to right, #f9f1fa 0%, #f9f1fa 50%, #000000 50%, #5b42eb 50%, #5b42eb 100%);
     padding: 10% 0;
+    text-shadow: 4px 4px rgba(51, 51, 51, 0.97);
   }
   .container .hero .content {
     text-align: right;
@@ -217,7 +232,7 @@ ul li {
 .container .hover-text {
   color: white;
   font-size: 48px;
-  text-shadow: 4px 4px black;
+  text-shadow: 4px 4px rgba(51, 51, 51, 0.97);
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   position: absolute;
@@ -258,7 +273,7 @@ ul li {
   -webkit-text-stroke-width: 0.25px;
   -webkit-text-stroke-color: black;
   text-shadow: 2px 2px black;
-  color: #f9f1fa;
+  color: white;
 }
 .container .modal .modal-header .close {
   color: white;
@@ -271,6 +286,14 @@ ul li {
   height: auto;
   margin-right: 20px;
   cursor: pointer;
+  transition: transform 0.9s;
+}
+.container .modal .modal-header .close:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
+  box-shadow: 2px 2px 5px rgba(249, 241, 250, 0.9);
 }
 .container .modal .modal-header .close:hover:focus {
   color: black;
@@ -278,7 +301,14 @@ ul li {
 }
 @media screen and (min-width: 768px) {
   .container .modal .modal-header {
+    width: 65%;
     font-size: 60px;
+    margin: auto;
+  }
+  .container .modal .modal-header .close {
+    font-size: 50px;
+    width: 65px;
+    height: 65px;
   }
 }
 .container .modal .modal-body {
@@ -290,10 +320,18 @@ ul li {
   border-radius: 20px;
   width: 80%;
   height: auto;
+  font-size: 20px;
+  line-height: 1.75;
+  box-shadow: 4px 4px 5px rgba(51, 51, 51, 0.97);
 }
 @media screen and (min-width: 768px) {
   .container .modal .modal-body {
+    text-align: left;
     width: 60%;
+  }
+  .container .modal .modal-body h3 {
+    text-align: center;
+    font-size: 24px;
   }
 }
 .container .modal .modal-body .info {
@@ -312,6 +350,13 @@ ul li {
   height: 194px;
   border: solid 2px #5b42eb;
   border-radius: 20%;
+  transition: transform 0.7s;
+}
+.container .modal .image-content-block .thumbnail:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .container .modal .image-content-block h3 {
   font-size: 36px;
@@ -326,7 +371,8 @@ ul li {
     float: left;
   }
   .container .modal .image-content-block .description {
-    padding: 0 5%;
+    text-align: right;
+    padding: 0 10%;
   }
 }
 @keyframes fadein {
@@ -355,6 +401,14 @@ ul li {
     opacity: 1;
   }
 }
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .container .footer {
   position: relative;
   background: linear-gradient(to bottom, #f9f1fa 0%, #f9f1fa 50%, #000000 50%, #5b42eb 50%, #5b42eb 100%);
@@ -365,21 +419,30 @@ ul li {
   font-size: 40px;
   position: relative;
   text-align: center;
-  text-shadow: 4px 4px black;
 }
-.container .footer .container ul {
+.container .footer .social-links {
+  padding-top: 40px;
+}
+.container .footer .social-links ul {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   position: relative;
   padding-top: 12%;
 }
-.container .footer .container ul li {
+.container .footer .social-links ul li {
   padding: 5px 20px;
 }
-.container .footer .container ul .icons {
+.container .footer .social-links ul .icons {
   width: 75px;
   height: 75px;
+  transition: transform 0.7s;
+}
+.container .footer .social-links ul .icons:hover {
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  transform: scale(1.2);
 }
 @media screen and (min-width: 768px) {
   .container .footer {
@@ -391,6 +454,10 @@ ul li {
     font-size: 60px;
     text-align: left;
     margin-left: 5%;
+    text-shadow: 4px 4px rgba(51, 51, 51, 0.97);
+  }
+  .container .footer .social-links {
+    padding-top: 0;
   }
   .container .footer .container ul {
     left: 20%;

@@ -369,6 +369,7 @@ ul li {
   }
   .container .modal .image-content-block .thumbnail {
     float: left;
+    margin: 30px;
   }
   .container .modal .image-content-block .description {
     text-align: right;

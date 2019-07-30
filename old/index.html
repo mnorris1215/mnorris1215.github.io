@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Monica Norris -- Portfolio</title>
+        <link rel="stylesheet" href="css/portfolio.css" />
+        <link href="https://fonts.googleapis.com/css?family=Signika&display=swap"
+        rel="stylesheet" />
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li><a id="contact-nav" class="open" data-modal="contactModal">Contact</a></li>
+                    <li><a href="media/MonicaNorris_Resume.pdf" target="_blank">
+                            Resume</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    <!-- Hero -->
+        <div class="container">
+            <section class="hero">
+                <div class="content">
+                    <h1>Monica Norris</h1>
+                    <h2>WEB DEVELOPMENT</h2>
+                </div>
+
+            </section>
+
+            <!-- Loading spinner -->
+            <div id="spinner"></div>
+
+    <!-- Four block section -->
+            <section class= "four-up" id="block-section">
+
+                <a class="about up open" data-modal="aboutModal"><span class="hover-text">About</span></a>
+                <a class="projects up open" data-modal="projectsModal"><span class="hover-text">Projects</span></a>
+                <a class="xp up open" data-modal="xpModal"><span class="hover-text">Experience</span></a>
+                <a class="contact up open" data-modal="contactModal"><span class="hover-text">Contact</span></a>
+
+                <!-- Modals -->
+                <!-- About -->
+                <div id="aboutModal" class="modal">
+                    <div class="modal-header">
+                        <span class="close" style="background-color:rgba(0, 131, 202, .8);">
+                            &times;</span>
+                        <h2>About</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h3>This isn't your average bio.</h3>
+                        <p>My name is <b style="font-size: 22px;">Monica Norris</b> and I am a Front-End Web Developer based out of Chicago, Illinois.
+                        My primary focus is Web Development, with a career transition into project Development and Operations.
+                        I love what I do, not because I like staring at screens for hours, but for the thrill
+                        of finally solving a difficult problem. For the churning of vague ideas to practical, effecient sites.
+                        For the excitement to have others enjoy and utilize what I created. These passions of mine are the reasons why
+                        Internet Explorer has not lead me to quit. </p>
+
+                        <p>When I'm not fighting the evils of browser compatibility,
+                            I enjoy traveling, exploring new restaurants, playing video-games, and kickball. </p>
+                    </div>
+                </div>
+
+                <!-- Projects -->
+                <div class="modal" id="projectsModal">
+                    <div class="modal-header">
+                        <span class="close" style="background-color:rgba(193, 184, 244, .8);">
+                            &times;</span>
+                        <h2>Projects</h2>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="http://www.whowasbookseries.com/history-bee/">
+                                    <img class="thumbnail" src="media/History-Bee-Thumbnail.png" alt="History-Bee"></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>Who Was? History Bee</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://renegades.universeofmarissameyer.com/superfan-quiz/">
+                                    <img class="thumbnail" src="media/SuperFan-Quiz-Thumbnail.png" alt="SuperFan Quiz"></a>
+                            </div>
+                            <div class="description" id="middle">
+                                <h3>Marissa Meyer: SuperFan Quiz</h3>
+                                <!-- <p>Integrated Django and Vue.js to build an engaging questionnaire for a popular book
+                                site. Employed Gulp task runner to help automate building process. </p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+
+                            <div class="image">
+                                <a target="_blank" href="https://github.com/mnorris1215/mnorris1215.github.io">
+                                <img class="thumbnail" src="media/Portfolio-Thumbnail.png" alt="My Portfolio"></a>
+                            </div>
+                            <div class="description">
+                                <h3>This Portfolio: Source Code</h3>
+                                <!-- <p>Check out the behind-the-scenes code that made the magic of this site possible.
+                                This portfolio is a strong example for a minimalist approach to site building,
+                                one that is simple, light-weight, and compatible. All without being platform or framework based.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://www.trccompanies.com/">
+                                <img class="thumbnail" src="media/trcThumbnail.png" alt="TRC"></a>
+                            </div>
+
+                            <div class="description">
+                                <h3>TRC</h3>
+                                <!-- <p>Check out the behind-the-scenes code that made the magic of this site possible.
+                                This portfolio is a strong example for a minimalist approach to site building,
+                                one that is simple, light-weight, and compatible. All without being platform or framework based.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://www.americainbloom.org/">
+                                    <img class="thumbnail" src="media/aibThumbnail.png" alt="America In Bloom"></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>America In Bloom</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://beardwood.com/">
+                                    <img class="thumbnail" src="media/beardwoodThumbnail.png" alt="Beardwood Co."></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>Beardwood Co.</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://stutzandfoxbooks.com/">
+                                    <img class="thumbnail" src="media/llamaThumbnail.png" alt="Llama Llama"></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>Llama Llama</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="http://lastkidsonearth.com/explore/">
+                                    <img class="thumbnail" src="media/last-kidsThumbnail.png" alt="Last Kids on Earth"></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>Last Kids on Earth</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+
+                        <div class="image-content-block">
+                            <div class="image">
+                                <a target="_blank" href="https://www.chicagohumanities.org/">
+                                    <img class="thumbnail" src="media/chfThumbnail.png" alt="Chicago Humanities Festival"></a>
+                           </div>
+
+                            <div class="description">
+                                <h3>Chicago Humanities Festival</h3>
+                                <!-- <p>Utilized a merging of Vue.js and Wordpress to create
+                               an interactive webpage for competition promotion. This
+                               project is also an example of the use of Docker and Kubernetes
+                               for deployment.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="modal" id="xpModal">
+                    <div class="modal-header">
+                        <span class="close" style="background-color:rgba(134, 50, 140, .8);">
+                            &times;</span>
+                        <h2>Experience</h2>
+                    </div>
+                    <div class="modal-body">
+                        <h3>Junior Developer for Mess Marketing from 2018 to present</h3>
+
+                        <p>Developed responsive web pages for client projects utilizing
+                        Vue.js and Wordpress. Lead quality assurance testing for all client
+                        projects. Worked with Director to understand, document, and transition
+                        towards managing agency's DevOps tooolchain and release process.
+                        Coordinated with project management team to oversee content entry,
+                        developer workload and release.</p>
+
+                        <h3>Freelance Web Developer from 2017 to 2018</h3>
+
+                        <p>Built functional web sites for a variety of small clients.
+                        Networked with growing businesses who required site building expertise.
+                        Gained connections to a diverse group of peers. Practiced skill of building
+                        sites with and without frameworks and/or content management systems.
+                        Utilized Git version control to manage ever changing client requests.</p>
+                    </div>
+                </div>
+
+                <!-- Contact -->
+                <div class="modal" id="contactModal">
+                    <div class="modal-header">
+                        <span class="close" style="background-color:rgba(171, 171, 171, .8);">
+                            &times;</span>
+                        <h2>Contact</h2>
+                    </div>
+                <div class=" modal-body">
+                    <span class="info" id="call"><label for="">Call: </label>
+                        <a href = "tel:6787646050"> (678)764-6050</a></span>
+                    <label for="email"></label><span class="info" id="email"><label for="">Email: </label>
+                        <a href = "mailto:mnorris1215@yahoo.com">
+                        mnorris1215&#8203;@yahoo.com</a></span>
+                    </div>
+                </div>
+            </section>
+
+    <!-- Footer -->
+            <section class= "footer">
+                <div class="container">
+                    <div class="copy">
+                        <p>Let's chat soon.</p>
+                    </div>
+                    <div class="social-links">
+                        <ul>
+                            <li><a href="media/MonicaNorris_Resume.pdf" target="_blank">
+                                <img class="icons" src="media/resumeIcon.png" alt="My Resume"></img></a></li>
+                            <li><a href="https://www.linkedin.com/in/monica-norriswebdevelopment" target="_blank">
+                                <img class="icons" src="media/linkedInIcon.png" alt="LinkedIn"></img></a></li>
+                            <li><a href="https://github.com/mnorris1215" target="_blank">
+                                <img class="icons" src="media/githubIcon.png" alt="GitHub"></img></a></li>
+                            <li><a href="https://twitter.com/monicanorris1" target="_blank">
+                                <img class="icons" src="media/twitterIcon.png" alt="Twitter"></img></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script type="text/javascript" src="js/portfolio.js"></script>
+    </body>
+</html>

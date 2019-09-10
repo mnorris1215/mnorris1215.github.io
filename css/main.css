@@ -839,7 +839,7 @@ input::-moz-focus-inner {
 
 /* line definition style
  * ----------------------------------------------- */
-.lining dt,
+/* .lining dt,
 .lining dd {
   display: inline;
   margin: 0;
@@ -862,7 +862,7 @@ input::-moz-focus-inner {
 .lining dd:before {
   content: ": ";
   margin-left: -0.2em;
-}
+} */
 
 /* dictionary definition style
  * ----------------------------------------------- */
@@ -3005,7 +3005,7 @@ html.no-csstransitions .home-content__main {
  * # footer
  *
  * ------------------------------------------------------------------- */
-footer {
+/* footer {
   padding-top: 9rem;
   padding-bottom: 6rem;
   color: rgba(255, 255, 255, 0.6);
@@ -3017,12 +3017,12 @@ footer {
 
 footer a {
   color: #FFFFFF;
-}
+} */
 
 /* -------------------------------------------------------------------
  * ## go top
  * ------------------------------------------------------------------- */
-.ss-go-top a::before {
+/* .ss-go-top a::before {
   content: "";
   display: block;
   height: 16px;
@@ -3040,13 +3040,13 @@ footer a {
 .ss-go-top a:hover,
 .ss-go-top a:focus {
   background-color: #2d173d;
-}
+} */
 
 /* -------------------------------------------------------------------
  * responsive:
  * footer
  * ------------------------------------------------------------------- */
-@media only screen and (max-width:600px) {
+/* @media only screen and (max-width:600px) {
   .ss-copyright span {
     display: block;
   }
@@ -3082,6 +3082,6 @@ footer a {
     padding: 0 2rem;
   }
 
-}
+} */
 
 /*# sourceMappingURL=main.css.map */
